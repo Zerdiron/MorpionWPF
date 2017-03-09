@@ -1,0 +1,51 @@
+﻿<Page x:Class="MorpionWPF.Menu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MorpionWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="524"
+      Title="Menu">
+
+	<Grid Background="AntiqueWhite">
+
+		<!-- Largeur des colonnes -->
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="62"/>
+			<ColumnDefinition Width="62"/>
+			<ColumnDefinition Width="46*"/>
+			<ColumnDefinition Width="46*"/>
+			<ColumnDefinition Width="46*"/>
+			<ColumnDefinition Width="46*"/>
+			<ColumnDefinition Width="46*"/>
+			<ColumnDefinition Width="46*"/>
+			<ColumnDefinition Width="62"/>
+			<ColumnDefinition Width="62"/>
+		</Grid.ColumnDefinitions>
+		<!-- Hauteurs des lignes -->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="23*"/>
+			<RowDefinition Height="23*"/>
+			<RowDefinition Height="23*"/>
+			<RowDefinition Height="46*"/>
+			<RowDefinition Height="46*"/>
+			<RowDefinition Height="14*"/>
+		</Grid.RowDefinitions>
+		
+		<!-- Boutons -->
+		<Button x:Name="X" Content="X" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" Height="23" Width="60" VerticalAlignment="Center" Click="X_Click" Margin="0,30,0,0"/>
+		<Button x:Name="O" Content="O" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Height="23" Width="60" VerticalAlignment="Top" Click="O_Click"/>
+
+		<!-- Informations Textuelles -->
+		<Label x:Name="Text_Choix" Content="Choisissez Votre Symbole" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="3" Grid.Row="3" Grid.ColumnSpan="4"/>
+		<Label x:Name="Text_Joueur1" Content="Joueur 1" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Background="LightBlue" Grid.ColumnSpan="2"/>
+		<Label x:Name="Text_Joueur2" Content="" HorizontalAlignment="Center" Grid.Row="1" Grid.Column="8" VerticalAlignment="Center" Background="Red" Grid.ColumnSpan="2" Foreground="White"/>
+		
+		
+		<!-- Les images des côtés -->
+		<Image x:Name="Image" HorizontalAlignment="Center" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"  VerticalAlignment="Center" Source="./Image.jpg" Margin="0,0,0,12"/>
+		<Image x:Name="Image2" HorizontalAlignment="Center" Grid.Row="3" Grid.RowSpan="2" Grid.Column="7" Grid.ColumnSpan="2"  VerticalAlignment="Center" Source="./Image2.png" Margin="0,0,0,12"/>
+
+	</Grid>
+</Page>
